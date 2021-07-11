@@ -1,6 +1,6 @@
 import requests
 import json
-url = "http://127.0.0.1:8000"
+url = "https://fastapi-ml-model.herokuapp.com"
 
 request_data1 = {
     "age": 39,
