@@ -76,7 +76,7 @@ def predict(data: Input):
                                      lb = lb_enc) 
     prediction_outcome = inference(model, X)
     
-    if prediction_outcome == 1:
+    if prediction_outcome[0] == 1:
         prediction = "Salary > 50k"
     else:
         prediction = "Salary <= 50k"
