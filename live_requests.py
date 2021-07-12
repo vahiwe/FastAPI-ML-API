@@ -20,26 +20,26 @@ request_data1 = {
 }
 
 request_data2 = {
-    "age": 38,
+    "age": 42,
     "workclass": "Private",
-    "fnlgt": 215646,
-    "education": "HS-grad",
-    "education_num": 9,
-    "marital_status": "Divorced",
-    "occupation": "Handlers-cleaners",
-    "relationship": "Not-in-family",
+    "fnlgt": 159449,
+    "education": "Bachelors",
+    "education_num": 13,
+    "marital_status": "Married-civ-spouse",
+    "occupation": "Exec_managerial",
+    "relationship": "Husband",
     "race": "White",
     "sex": "Male",
-    "capital_gain": 0,
+    "capital_gain": 5178,
     "capital_loss": 0,
     "hours_per_week": 40,
-    "native_country": "United-States",
+    "native_country": "United-States"
 }
 
 response = requests.post("{}/predict/".format(url), data=json.dumps(request_data1))
-print(response.status_code)
-print(response.json())
+print("Response code: ", response.status_code)
+print("Response from API: ",response.json())
 
 response = requests.post("{}/predict/".format(url), data=json.dumps(request_data2))
-print(response.status_code)
-print(response.json())
+print("Response code: ", response.status_code)
+print("Response from API: ",response.json())
